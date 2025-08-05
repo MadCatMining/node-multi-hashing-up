@@ -1,6 +1,6 @@
 {
     "name": "multi-hashing",
-    "version": "1.0.2",
+    "version": "2.0.0",
     "main": "index.js",
     "author": {
         "name": "Matthew Little",
@@ -12,11 +12,15 @@
     },
     "scripts": {
         "build": "node-gyp rebuild",
-        "test": "mocha --require babel-register --gc-global tests/test.vectors.js"
+        "test": "mocha tests/test.vectors.js",
+        "install": "node-gyp rebuild"
     },
     "dependencies": {
         "bindings": "*",
-        "nan": "^2.15.0"
+        "nan": "^2.19.0"
+    },
+    "engines": {
+        "node": ">=16.0.0"
     },
     "keywords": [
         "argon2",
@@ -35,8 +39,7 @@
         "sha1"
     ],
     "devDependencies": {
-        "babel-register": "^6.26.0",
-        "mocha": "^7.1.1"
+                "mocha": "^10.2.0"
     },
     "release": {
         "branches": [
